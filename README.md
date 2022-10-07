@@ -8,7 +8,7 @@
 
 -Required:
 - hcxtools `sudo apt-get -y install hcxtools` 
-- hashcat `sudo apt-get -y install hashcat`
+- [latest hashcat](https://github.com/hashcat/hashcat) 
 
 # Running 
 
