@@ -4,6 +4,7 @@ INSTALL_LOCATION="$(pwd)"
 
 echo "*** MUST BE RUN AS ROOT ***"
 
+mkdir $INSTALL_LOCATION/handshakes
 mkdir $INSTALL_LOCATION/handshakes/pcap
 mkdir $INSTALL_LOCATION/handshakes/hash
 ssh-keygen -t rsa
@@ -14,5 +15,5 @@ rm $INSTALL_LOCATION/handshakes/pcap/*.pub
 
 cd $INSTALL_LOCATION/handshakes/pcap
 hcxpcapngtool -o hash.hc22000 -E wordlist.txt *
-cp hash.hc22000 wordlist.txt $INSTALL_LOCATION/handshakes/hash
+mv hash.hc22000 wordlist.txt $INSTALL_LOCATION/handshakes/hash
 chmod -R a+rwx $INSTALL_LOCATION/*
