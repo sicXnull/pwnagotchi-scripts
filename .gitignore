@@ -1,3 +1,5 @@
 handshakes/pcap
 handshakes/hash
 .idea
+hashcat/scripts/*
+.env
