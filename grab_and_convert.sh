@@ -11,7 +11,7 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-cat <<EOT >> .env
+cat <<EOT > .env
 PROJECT_PATH="$INSTALL_LOCATION/"
 HASHCAT_PATH="$HASHCAT_LOCATION/"
 WORDLIST_PATH="$WORDLIST_LOCATION/"
