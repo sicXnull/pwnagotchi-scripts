@@ -1,5 +1,6 @@
-handshakes/pcap
-handshakes/hash
-.idea
-hashcat/scripts/*
 .env
+.idea
+handshakes
+hashcat/scripts
+ssh
+network-list.txt
