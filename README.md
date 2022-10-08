@@ -12,7 +12,7 @@
 
 # Running 
 
-- Pull files from pwnagotchi:
+- Pull files from pwnagotchi, convert to hc2000 and create attack script.
 
 ```
 sudo sh grab_and_convert.sh
