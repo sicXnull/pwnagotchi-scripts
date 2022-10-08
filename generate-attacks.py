@@ -7,7 +7,7 @@ project_path = os.environ.get("PROJECT_PATH")
 hashcat_path = os.environ.get("HASHCAT_PATH")
 wordlist_path = os.environ.get("WORDLIST_PATH")
 
-# The FULL path to the 'pwnagotchi-tools' folder in this repo
+# The FULL path to the 'pwnagotchi-scripts' folder in this repo
 fullProjectPath = f"{project_path}"
 
 # The FULL path to your hashcat 6.x.x install. Even if hashcat is added to your path,
@@ -19,16 +19,12 @@ fullHashcatPath = f"{hashcat_path}"
 fullWordListPath = f"{wordlist_path}"
 
 # This is the 'version' of the hashcat attacks in this file. This is
-# used to track the scripts used on the pmkid/hccapx files. If the
+# used to track the scripts used on the hc22000 files. If the
 # 'attacks' list below is manually updated this version can be incremented,
-# then if this script is run any pmkid/hccapx files with a 'waiting' status will
+# then if this script is run any hc22000 files with a 'waiting' status will
 # get new scripts generated for them.
 hashcatScriptVersion = "v1"
-
-networkCrackedStatusData = {}
-networkBSSIDData = {}
 sessionScripts = []
-
 
 def generateHashcatScript(filename):
     global hashcatScriptVersion
@@ -183,9 +179,7 @@ def generateHashcatScript(filename):
         script += hashcatCommand
     f.write(script)
     f.close()
-
     sessionScripts.append(f"{fileId}.sh")
-
 
 def generateScriptsForHCs():
     global hashcatScriptVersion
@@ -193,8 +187,6 @@ def generateScriptsForHCs():
         for filename in os.listdir("./handshakes/" + folder):
                 print("Generating hashcat script for " + filename)
                 generateHashcatScript(filename)
-
-
 def printLogo():
     print('''
  ▄ .▄ ▄▄▄· .▄▄ ·  ▄ .▄ ▄▄·  ▄▄▄· ▄▄▄▄▄    .▄▄ ·  ▄▄· ▄▄▄  ▪   ▄▄▄·▄▄▄▄▄
@@ -208,7 +200,6 @@ def printLogo():
           ▐█▄▪▐█▐█▄▄▌██▐█▌▐█▄▄▌▐█•█▌▐█ ▪▐▌ ▐█▌·▐█▌.▐▌▐█•█▌
           ·▀▀▀▀  ▀▀▀ ▀▀ █▪ ▀▀▀ .▀  ▀ ▀  ▀  ▀▀▀  ▀█▄▀▪.▀  ▀
     ''')
-
 
 printLogo()
 generateScriptsForHCs()
