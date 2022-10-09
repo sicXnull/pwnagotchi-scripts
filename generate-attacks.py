@@ -161,14 +161,14 @@ def generateHashcatScript(filename):
         hashcatCommand += hashPath + " "
         if ("0" in attack[0]):
             #Comment out for now. Will revisit later
-            '''if ("bssid.rule" in attack[1]):
+            if ("bssid.rule" in attack[1]):
                 hashcatCommand += '-r "' + rulePath + attack[1] + '"'
-            elif (("ssid-ninja.rule" in attack[1]) or ("4-digit-append.rule" in attack[1])):
+                '''elif (("ssid-ninja.rule" in attack[1]) or ("4-digit-append.rule" in attack[1])):
                 hashcatCommand = 'python "' + wordNinjaPath + '/wordNinjaGenerator.py" ' + ssid + ' | ' + hashcatCommand
-                hashcatCommand += '-r "' + rulePath + attack[1] + '"'
-            else:'''
-            if (len(attack) > 3 and "-S" in attack[3]):
-                hashcatCommand += "-S "
+                hashcatCommand += '-r "' + rulePath + attack[1] + '''
+            else:
+                if (len(attack) > 3 and "-S" in attack[3]):
+                    hashcatCommand += "-S "
                 hashcatCommand += '"' + fullWordListPath + attack[1] + '"'
                 if (len(attack) > 2):
                     hashcatCommand += ' -r "' + rulePath + attack[2] + '"'
