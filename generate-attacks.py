@@ -26,6 +26,7 @@ fullWordListPath = f"{wordlist_path}"
 hashcatScriptVersion = "v1"
 sessionScripts = []
 
+
 def generateHashcatScript(filename):
     global hashcatScriptVersion
     global sessionScripts
@@ -156,14 +157,15 @@ def generateHashcatScript(filename):
         hashcatCommand += outputPath + " "
         hashcatCommand += hashPath + " "
         if ("0" in attack[0]):
-            if ("bssid.rule" in attack[1]):
+            #Comment out for now. Will revisit later
+            '''if ("bssid.rule" in attack[1]):
                 hashcatCommand += '-r "' + rulePath + attack[1] + '"'
             elif (("ssid-ninja.rule" in attack[1]) or ("4-digit-append.rule" in attack[1])):
                 hashcatCommand = 'python "' + wordNinjaPath + '/wordNinjaGenerator.py" ' + ssid + ' | ' + hashcatCommand
                 hashcatCommand += '-r "' + rulePath + attack[1] + '"'
-            else:
-                if (len(attack) > 3 and "-S" in attack[3]):
-                    hashcatCommand += "-S "
+            else:'''
+            if (len(attack) > 3 and "-S" in attack[3]):
+                hashcatCommand += "-S "
                 hashcatCommand += '"' + fullWordListPath + attack[1] + '"'
                 if (len(attack) > 2):
                     hashcatCommand += ' -r "' + rulePath + attack[2] + '"'
@@ -179,6 +181,7 @@ def generateHashcatScript(filename):
         script += hashcatCommand
     f.write(script)
     f.close()
+
     sessionScripts.append(f"{fileId}.sh")
 
 def generateScriptsForHCs():
@@ -200,6 +203,7 @@ def printLogo():
           ▐█▄▪▐█▐█▄▄▌██▐█▌▐█▄▄▌▐█•█▌▐█ ▪▐▌ ▐█▌·▐█▌.▐▌▐█•█▌
           ·▀▀▀▀  ▀▀▀ ▀▀ █▪ ▀▀▀ .▀  ▀ ▀  ▀  ▀▀▀  ▀█▄▀▪.▀  ▀
     ''')
+
 
 printLogo()
 generateScriptsForHCs()
