@@ -1,3 +1,7 @@
+# Modified version of generate-hashcat-scripts.py which can be found here:
+# https://github.com/mtagius/pwnagotchi-tools
+# Big thanks to the original author
+
 import os
 from dotenv import load_dotenv
 from random import randint
@@ -25,7 +29,6 @@ fullWordListPath = f"{wordlist_path}"
 # get new scripts generated for them.
 hashcatScriptVersion = "v1"
 sessionScripts = []
-
 
 def generateHashcatScript(filename):
     global hashcatScriptVersion
@@ -148,7 +151,7 @@ def generateHashcatScript(filename):
         script += '/d '
     script += '"' + fullHashcatPath + '"\n'
     for attack in attacks:
-        hashcatCommand = "hashcat "
+        hashcatCommand = "./hashcat.bin "
         hashcatCommand += attack[0] + " "
         hashcatCommand += hashType + " "
         hashcatCommand += session + "_" + str(randint(1000, 9999)) + " "
@@ -203,7 +206,5 @@ def printLogo():
           ▐█▄▪▐█▐█▄▄▌██▐█▌▐█▄▄▌▐█•█▌▐█ ▪▐▌ ▐█▌·▐█▌.▐▌▐█•█▌
           ·▀▀▀▀  ▀▀▀ ▀▀ █▪ ▀▀▀ .▀  ▀ ▀  ▀  ▀▀▀  ▀█▄▀▪.▀  ▀
     ''')
-
-
 printLogo()
 generateScriptsForHCs()

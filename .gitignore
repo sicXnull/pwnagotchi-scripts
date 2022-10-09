@@ -1,6 +1,7 @@
 .env
+network-list.txt
 .idea
 handshakes
 hashcat/scripts
 ssh
-network-list.txt
+hashcat/hashcat
