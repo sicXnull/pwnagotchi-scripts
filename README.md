@@ -2,14 +2,14 @@
 
 #### Needless to say, this project is for EDUCATIONAL use only and is not intended for any illegal usage.
 
--Inspired by [pwnagotchi-tools](https://github.com/mtagius/pwnagotchi-tools), Hashcat has since deprecated the 2500/16800 plugins. These scripts will do the following:
+Inspired by [pwnagotchi-tools](https://github.com/mtagius/pwnagotchi-tools), Hashcat has since deprecated the 2500/16800 plugins. These scripts will do the following:
 - SSH into pwnagotchi & pull .pcap handshakes 
 - Convert pcap to hc22000 format for hashcat
 
 
 
 
--Required:
+Required:
 - [hcxtools](https://launchpad.net/ubuntu/+source/hcxtools) `sudo apt-get -y install hcxtools` 
 - [7z](https://www.7-zip.org/download.html) `sudo apt-get -y install hcxtools`
 - [Hashcat 6.2+](https://hashcat.net/hashcat/) 
