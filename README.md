@@ -11,7 +11,7 @@ Inspired by [pwnagotchi-tools](https://github.com/mtagius/pwnagotchi-tools), Has
 
 Required:
 - [hcxtools](https://launchpad.net/ubuntu/+source/hcxtools) `sudo apt-get -y install hcxtools` 
-- [7z](https://www.7-zip.org/download.html) `sudo apt-get -y install hcxtools`
+- [7z](https://www.7-zip.org/download.html) `sudo apt-get -y install p7zip-full`
 - [Hashcat 6.2+](https://hashcat.net/hashcat/) 
 - [Cuda Toolkit (For GPU)](https://linuxconfig.org/how-to-install-cuda-on-ubuntu-20-04-focal-fossa-linux)
 - [Nvidia Drivers (For GPU)](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-20-04-focal-fossa-linux)
