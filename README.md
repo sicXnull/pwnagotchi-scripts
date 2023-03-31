@@ -39,7 +39,7 @@ You will need to download the following wordlists. Move them to /pwnagotchi-scri
 * [words_alpha.txt](https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt) - Any list of all lowercase common words can replace this.
 * [hashesorg2019](https://weakpass.com/wordlist/1851)
 * [openwall.net-all.txt](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/openwall.net-all.txt)
-* [rockyou](https://github.com/praetorian-code/Hob0Rules/blob/master/wordlists/rockyou.txt.gz) - Literally the famous rockyou list. This is the first link I found online to download it.
+* [rockyou](https://github.com/praetorian-code/Hob0Rules/blob/master/wordlists/rockyou.txt.gz) - The famous rockyou list. 
 * [Top24Million-WPA-probable-v2.txt](https://github.com/berzerk0/Probable-Wordlists/blob/master/Real-Passwords/WPA-Length/Real-Password-WPA-MegaLinks.md)
 * [Top1pt8Billion-WPA-probable-v2.txt](https://github.com/berzerk0/Probable-Wordlists/blob/master/Real-Passwords/WPA-Length/Real-Password-WPA-MegaLinks.md)
 * [passphrases.txt](https://initstring.keybase.pub/passphrase-wordlist/passphrases.txt?dl=1) - The repo for this list is [here](https://github.com/initstring/passphrase-wordlist).
