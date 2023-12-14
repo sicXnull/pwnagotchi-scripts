@@ -2,7 +2,7 @@
 
 #### Needless to say, this project is for EDUCATIONAL use only and is not intended for any illegal usage.
 
-Inspired by [pwnagotchi-tools](https://github.com/mtagius/pwnagotchi-tools), Hashcat has since deprecated the 2500/16800 plugins. These scripts will do the following:
+Basically a linux version of [pwnagotchi-tools](https://github.com/mtagius/pwnagotchi-tools). These scripts will do the following:
 - SSH into pwnagotchi & pull .pcap handshakes 
 - Convert pcap to hc22000 format for hashcat
 
