@@ -1,3 +1,7 @@
+# Modified version of generate-hashcat-scripts.py which can be found here:
+# https://github.com/mtagius/pwnagotchi-tools
+# Big thanks to the original author
+
 import os
 import logging
 from dotenv import load_dotenv
